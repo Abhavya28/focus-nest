@@ -31,8 +31,8 @@ const ModeSwitcher = ({
                         className={`
                             px-5 py-2 rounded-xl capitalize transition
                             ${mode === item
-                                ? "bg-white text-black"
-                                : "bg-white/10 text-red"}
+                                ? "bg-black text-white"
+                                : "text-black"}
                         `}
                     >
                         {item}
