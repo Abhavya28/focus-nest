@@ -1,13 +1,4 @@
-
-type Mode =
-    | "pomodoro"
-    | "shortBreak"
-    | "longBreak";
-
-type ModeSwitcherProps = {
-    mode: Mode;
-    setMode: (mode: Mode) => void;
-};
+import { Mode, ModeSwitcherProps } from "../types";
 
 const ModeSwitcher = ({
     mode,

@@ -1,10 +1,4 @@
-
-type ControlsProps = {
-    isRunning: boolean;
-    onStart: () => void;
-    onPause: () => void;
-    onReset: () => void;
-};
+import { ControlsProps } from "../types";
 
 const Controls = ({
     isRunning,
@@ -15,7 +9,6 @@ const Controls = ({
 
     return (
         <div className="flex items-center gap-4 mt-8">
-
             {
                 isRunning ? (
                     <button
@@ -40,7 +33,6 @@ const Controls = ({
             >
                 Reset
             </button>
-
         </div>
     );
 };

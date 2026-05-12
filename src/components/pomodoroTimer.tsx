@@ -4,11 +4,7 @@ import { useEffect, useState } from "react";
 import Timer from "./timer";
 import Controls from "./controls";
 import ModeSwitcher from "./modeSwitcher";
-
-type Mode =
-    | "pomodoro"
-    | "shortBreak"
-    | "longBreak";
+import { Mode } from "../types";
 
 const TIMER_MODES = {
     pomodoro: 25 * 60,
@@ -70,26 +66,13 @@ const PomodoroTimer = () => {
             <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-pink-500/20 blur-3xl rounded-full" />
 
             <div className="relative z-10 w-full flex flex-col items-center">
-
-                <div className="mb-10 text-center">
-                    <h1 className="text-5xl font-bold text-white tracking-wide">
-                        Focus Nest
-                    </h1>
-
-                    <p className="text-white/60 mt-3 text-sm">
-                        Your cozy productivity space
-                    </p>
-                </div>
-
                 <ModeSwitcher
                     mode={mode}
                     setMode={handleModeChange}
                 />
 
                 <div className="my-12">
-
                     <Timer time={time} />
-
                 </div>
 
                 <Controls
@@ -114,7 +97,6 @@ const PomodoroTimer = () => {
                         </div>
                     )
                 }
-
             </div>
         </div>
     );
