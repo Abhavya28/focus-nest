@@ -1,5 +1,6 @@
 export type ControlsProps = {
     isRunning: boolean;
+    hasPaused: boolean;
     onStart: () => void;
     onPause: () => void;
     onReset: () => void;

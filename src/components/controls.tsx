@@ -4,6 +4,7 @@ const Controls = ({
     isRunning,
     onStart,
     onPause,
+    hasPaused,
     onReset,
 }: ControlsProps) => {
 
@@ -22,7 +23,10 @@ const Controls = ({
                         onClick={onStart}
                         className="px-6 py-3 rounded-xl bg-green-500 text-black font-medium"
                     >
-                        Start
+                        {
+                            hasPaused ? "Resume" : "Start"
+                        }
+                        
                     </button>
                 )
             }
