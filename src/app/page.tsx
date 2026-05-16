@@ -1,9 +1,35 @@
+"use client";
+
+import { useSelector } from "react-redux";
 import PomodoroTimer from "../components/pomodoroTimer";
 
+
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-[#0f0f14] flex items-center justify-center px-4 pt-28">
-      <PomodoroTimer />
-    </div>
-  );
+
+    const selectedBg = useSelector(
+        (state: any) =>
+            state.background.selectedBg
+    );
+
+    return (
+        <main
+            className="
+                min-h-screen
+                bg-cover
+                bg-center
+                transition-all
+                duration-500
+                flex items-center justify-center
+                px-4
+            "
+            style={{
+                backgroundImage:
+                    `url(${selectedBg})`,
+            }}
+        >
+
+            <PomodoroTimer />
+
+        </main>
+    );
 }

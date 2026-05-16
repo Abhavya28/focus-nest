@@ -1,7 +1,11 @@
 "use client";
 
+import { useState } from "react";
+import BackgroundCards from "../backgroundCards";
+
 
 const Navbar = () => {
+    const [showAmbience, setShowAmbience] = useState(false);
     return (
         <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/20 backdrop-blur-xl">
 
@@ -29,7 +33,7 @@ const Navbar = () => {
                         Focus
                     </button>
 
-                    <button className="text-white/70 hover:text-white transition duration-300">
+                    <button onClick={() => setShowAmbience(!showAmbience)} className="text-white/70 hover:text-white transition duration-300">
                         Ambience
                     </button>
 
@@ -44,6 +48,24 @@ const Navbar = () => {
 
                 </button>
             </div>
+            {
+                showAmbience && (
+                    <div
+                        className="
+            absolute top-20 right-10
+            w-80 p-5
+            rounded-3xl
+            bg-black/40
+            backdrop-blur-2xl
+            border border-white/10
+         "
+                    >
+
+                        <BackgroundCards />
+
+                    </div>
+                )
+            }
         </nav>
     );
 };
