@@ -20,3 +20,9 @@ export type ModeSwitcherProps = {
 export type TimerProps = {
     time: number;
 };
+
+export type Tasks = {
+    id: string;
+    task: string;
+    completed: boolean;
+}

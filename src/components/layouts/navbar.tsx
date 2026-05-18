@@ -2,10 +2,13 @@
 
 import { useState } from "react";
 import BackgroundCards from "../backgroundCards";
+import Link from "next/link";
+import Todo from "../todo/todo";
 
 
 const Navbar = () => {
     const [showAmbience, setShowAmbience] = useState(false);
+    const [showTodo, setShowTodo] = useState(false);
     return (
         <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/20 backdrop-blur-xl">
 
@@ -26,19 +29,15 @@ const Navbar = () => {
                 <div className="hidden md:flex items-center gap-10">
 
                     <button className="text-white/70 hover:text-white transition duration-300">
-                        Home
-                    </button>
-
-                    <button className="text-white/70 hover:text-white transition duration-300">
-                        Focus
+                        <Link href="/">Focus</Link>
                     </button>
 
                     <button onClick={() => setShowAmbience(!showAmbience)} className="text-white/70 hover:text-white transition duration-300">
                         Ambience
                     </button>
 
-                    <button className="text-white/70 hover:text-white transition duration-300">
-                        Stats
+                    <button onClick={() => setShowTodo(!showTodo)} className="text-white/70 hover:text-white transition duration-300">
+                        ToDo
                     </button>
                 </div>
 
@@ -63,6 +62,16 @@ const Navbar = () => {
 
                         <BackgroundCards />
 
+                    </div>
+                )
+            }
+
+            {
+                showTodo && (
+                    <div
+                        className="absolute -bottom-80 right-10 w-80 p-5 rounded-3xl bg-black/40 backdrop-blur-2xl border border-white/10"
+                    >
+                        <Todo />
                     </div>
                 )
             }

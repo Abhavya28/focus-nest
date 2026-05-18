@@ -82,7 +82,7 @@ const PomodoroTimer = () => {
                     setMode={handleModeChange}
                 />
 
-                <div className="relative flex items-center justify-center">
+                {/* <div className="relative flex items-center justify-center">
 
                     <TimerRing
                         progress={progress}
@@ -92,7 +92,7 @@ const PomodoroTimer = () => {
                         <Timer time={time} />
                     </div>
 
-                </div>
+                </div> */}
 
                 <Controls
                     isRunning={isRunning}
