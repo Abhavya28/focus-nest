@@ -3,7 +3,7 @@
 import { useState } from "react";
 import BackgroundCards from "../backgroundCards";
 import Link from "next/link";
-import Todo from "../todo/todo";
+import Todo from "../todo";
 
 
 const Navbar = () => {
@@ -68,9 +68,7 @@ const Navbar = () => {
 
             {
                 showTodo && (
-                    <div
-                        className="absolute -bottom-80 right-10 w-80 p-5 rounded-3xl bg-black/40 backdrop-blur-2xl border border-white/10"
-                    >
+                    <div>
                         <Todo />
                     </div>
                 )

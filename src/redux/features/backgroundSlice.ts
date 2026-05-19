@@ -2,7 +2,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    selectedBg: "/backgrounds/default.jpg",
+    selectedBg: "/backgrounds/forest.jpg",
 };
 
 const backgroundSlice = createSlice({
