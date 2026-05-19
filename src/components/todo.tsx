@@ -100,8 +100,8 @@ const Todo = () => {
                         }}
 
                         className="
-                            fixed top-28 right-10 z-50 w-[380px] max-h-[80vh] rounded-[32px] bg-black/30
-                            backdrop-blur-2xl
+                            fixed top-28 left-10 z-50 w-[380px] max-h-[80vh] rounded-[32px] bg-black/60
+                            backdrop-blur-xl
                             border border-white/10
                             shadow-[0_0_60px_rgba(0,0,0,0.4)]
                             overflow-hidden"

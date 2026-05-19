@@ -9,7 +9,7 @@ import TimerRing from "./timerRing";
 
 const TIMER_MODES = {
     pomodoro: 25 * 60,
-    shortBreak: 0.2 * 60,
+    shortBreak: 5 * 60,
     longBreak: 15 * 60,
 };
 

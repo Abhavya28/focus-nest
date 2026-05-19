@@ -10,7 +10,7 @@ const Navbar = () => {
     const [showAmbience, setShowAmbience] = useState(false);
     const [showTodo, setShowTodo] = useState(false);
     return (
-        <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/20 backdrop-blur-xl">
+        <nav className="fixed top-0 left-0 w-full z-50 border-b border-white/10 bg-black/60 backdrop-blur-xl">
 
             <div className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
 
@@ -50,16 +50,8 @@ const Navbar = () => {
             {
                 showAmbience && (
                     <div
-                        className="
-            absolute top-20 right-10
-            w-80 p-5
-            rounded-3xl
-            bg-black/40
-            backdrop-blur-2xl
-            border border-white/10
-         "
+                        className="absolute top-26 right-10 w-80 p-5 rounded-3xl bg-black/20 backdrop-blur-2xl border border-white/10"
                     >
-
                         <BackgroundCards />
 
                     </div>

@@ -17,8 +17,8 @@ const backgrounds = [
         image: "/backgrounds/night.jpg",
     },
     {
-        name: "Rain",
-        image: "/backgrounds/rain.jpg",
+        name: "Cozy Space",
+        image: "/backgrounds/cozySpace.jpg",
     },
 ];
 
