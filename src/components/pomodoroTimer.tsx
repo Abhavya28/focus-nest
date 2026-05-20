@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Timer from "./timer";
 import Controls from "./controls";
 import ModeSwitcher from "./modeSwitcher";
@@ -9,7 +9,7 @@ import TimerRing from "./timerRing";
 
 const TIMER_MODES = {
     pomodoro: 25 * 60,
-    shortBreak: 15 * 60,
+    shortBreak: 0.2 * 60,
     longBreak: 15 * 60,
 };
 
@@ -21,7 +21,12 @@ const PomodoroTimer = () => {
     const [completed, setCompleted] = useState(false);
     const [hasPaused, setHasPaused] = useState(false);
 
+    const completeAudioRef = useRef<HTMLAudioElement | null>(null);
+
     const handleStart = () => {
+        if (time === 0) {
+            setTime(TIMER_MODES[mode]);
+        }
         setCompleted(false);
         setHasPaused(false);
         setIsRunning(true);
@@ -56,7 +61,10 @@ const PomodoroTimer = () => {
         if (time === 0 && isRunning) {
             setIsRunning(false);
             setCompleted(true);
+            completeAudioRef.current?.play();
         }
+
+
 
         let interval: ReturnType<typeof setInterval>;
         if (isRunning && time > 0) {
@@ -118,6 +126,10 @@ const PomodoroTimer = () => {
                     )
                 }
             </div>
+            <audio
+                ref={completeAudioRef}
+                src="/audios/completed.mp3"
+            />
         </div>
     );
 };
