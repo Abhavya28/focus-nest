@@ -7,18 +7,22 @@ const backgrounds = [
     {
         name: "Rain",
         image: "/backgrounds/rain.jpg",
+        audio: "/audios/rain.mp3"
     },
     {
         name: "Forest",
         image: "/backgrounds/forest.jpg",
+        audio: "/audios/forest.mp3"
     },
     {
         name: "Night",
         image: "/backgrounds/night.jpg",
+        audio: "/audios/night.mp3"
     },
     {
         name: "Cozy Space",
         image: "/backgrounds/cozySpace.jpg",
+        audio: "/audios/cozy.mp3"
     },
 ];
 
@@ -35,7 +39,7 @@ const BackgroundCards = () => {
                     <button
                         key={key}
                         onClick={() =>
-                            dispatch(setBackground(bg.image))
+                            dispatch(setBackground(bg))
                         }
                         className="
                             relative h-24 rounded-2xl

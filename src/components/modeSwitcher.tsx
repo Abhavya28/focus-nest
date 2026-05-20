@@ -13,7 +13,6 @@ const ModeSwitcher = ({
 
     return (
         <div className="flex items-center gap-4 mb-10">
-
             {
                 modes.map((item) => (
                     <button
@@ -30,7 +29,6 @@ const ModeSwitcher = ({
                     </button>
                 ))
             }
-
         </div>
     );
 };

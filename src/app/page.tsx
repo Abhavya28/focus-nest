@@ -6,9 +6,9 @@ import PomodoroTimer from "../components/pomodoroTimer";
 
 export default function Home() {
 
-    const selectedBg = useSelector(
+    const currentBackground = useSelector(
         (state: any) =>
-            state.background.selectedBg
+            state.background.currentBackground
     );
 
     return (
@@ -24,7 +24,7 @@ export default function Home() {
             "
             style={{
                 backgroundImage:
-                    `url(${selectedBg})`,
+                    `url(${currentBackground.image})`,
             }}
         >
 

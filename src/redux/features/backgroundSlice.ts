@@ -1,18 +1,29 @@
-
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    selectedBg: "/backgrounds/forest.jpg",
+    currentBackground: {
+        name: "Forest",
+        image: "/backgrounds/forest.jpg",
+        audio: "/audios/forest.mp3",
+    },
 };
 
 const backgroundSlice = createSlice({
     name: "background",
+
     initialState,
+
     reducers: {
+
         setBackground: (state, action) => {
-            state.selectedBg = action.payload;
+
+            state.currentBackground =
+                action.payload;
+
         },
+
     },
+
 });
 
 export const {
