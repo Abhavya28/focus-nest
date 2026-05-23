@@ -3,6 +3,8 @@
 Focus Nest is a modern productivity web application designed to help users stay focused and organized through an immersive Pomodoro experience.  
 The app combines focus timers, ambient environments, background audio, and task management into a clean and interactive workspace.
 
+🌐 Live Demo: https://focus-nestt.vercel.app
+
 ---
 
 ## Tech Stack
