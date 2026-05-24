@@ -13,7 +13,8 @@ The app combines focus timers, ambient environments, background audio, and task 
 - TypeScript
 - Tailwind CSS
 - Redux Toolkit
-- Framer Motion
+- Framer Motio
+- UUID
 
 ---
 
